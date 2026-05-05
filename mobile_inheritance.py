@@ -1,13 +1,4 @@
-# 1. Create inheritance using MobilePhone as base class and Apple &
-# Samsung as child class
-# 1. The base class should have properties:
-# 1. ScreenType = Touch Screen
-# 2. NetworkType = 4G/5G
-# 3. DualSim = True or False
-# 4. FrontCamera = (5MP/8MP/12MP/16MP)
-# 5. rearCamera = (8MP/12MP/16MP/32MP/48MP)
-# 6. RAM = (2GB/3GB/4GB)
-# 7. Storage = (16GB/32GB/64GB)
+#inheritance example
 
 class MobilePhone:
     def __init__(self,ScreenType,Networktype,Dualsim,FrontCamera,rearCamera,RAM,Storage):
@@ -18,7 +9,7 @@ class MobilePhone:
         self.rearCamera=rearCamera
         self.RAM=RAM
         self.Storage=Storage
-
+#functionalities
     def make_call(self,number):
         print(f"calling {number}...")
     def receive_call(self):
@@ -38,9 +29,9 @@ class MobilePhone:
 
    
 
-
+#apple child class
 class Apple(MobilePhone):
-    def __init__(self):
+     def __init__(self,ScreenType,Networktype,Dualsim,FrontCamera,rearCamera,RAM,Storage):
         super().__init__(
             "Touch Screen",
             "4G",
@@ -52,9 +43,9 @@ class Apple(MobilePhone):
         )
     def brand(self):
         print("Brand: Apple iphone") 
-
+#samsung class(child class)
 class Samsung(MobilePhone):
-    def __init__(self):
+    def __init__(self,ScreenType,Networktype,Dualsim,FrontCamera,rearCamera,RAM,Storage):
         super().__init__(
             "Touch Screen",
             "5G",
@@ -67,17 +58,31 @@ class Samsung(MobilePhone):
     def brand(self):
         print("Brand: Samsung Galaxy")
 
-iphone=Apple()
-iphone.brand()
-iphone.make_call("9865783392")
-iphone.receive_call()
-iphone.take_a_picture()
-iphone.show_specs()
+#Creating Apple objects
+iphone13 = Apple("5G", True, "12MP", "48MP", "4GB", "64GB")
+iphone14 = Apple("5G", False, "16MP", "48MP", "4GB", "128GB")
 
+
+#Using apple method
+iphone13=Apple()
+iphone13.brand()
+iphone13.make_call("9865783392")
+iphone13.receive_call()
+iphone13.take_a_picture()
+iphone13.show_specs()
+iphone14.brand()
+iphone14.show_specs()
 print("---------")
-Samsung_phone=Samsung()
-Samsung_phone.brand()
-Samsung_phone.make_call("9675783342")
-Samsung_phone.receive_call()
-Samsung_phone.take_a_picture()
-Samsung_phone.show_specs()
+#creating samsung objects
+samsungA = Samsung("4G", True, "8MP", "32MP", "3GB", "64GB")
+samsungS = Samsung("5G", True, "16MP", "48MP", "4GB", "128GB")
+
+SamsungA=Samsung()
+SamsungA.brand()
+SamsungA.make_call("9675783342")
+SamsungA.receive_call()
+SamsungA.take_a_picture()
+SamsungA.show_specs()
+
+SamsungS.brand()
+SamsungS.show_specs()

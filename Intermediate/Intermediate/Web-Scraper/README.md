@@ -68,11 +68,11 @@ pip install requests beautifulsoup4
 python scraper.py
 ```
 ### Project Workflow
-Send request to target website
-Fetch HTML content
-Parse webpage using BeautifulSoup
-Extract required data
-Display or save results
+-Send request to target website
+-Fetch HTML content
+-Parse webpage using BeautifulSoup
+-Extract required data
+-Display or save results
 
 ### Project Structure
 Web-Scraper/
@@ -84,12 +84,12 @@ Web-Scraper/
 
 Through this project, I learned:
 
-Web scraping fundamentals
-Working with HTTP requests
-HTML parsing using BeautifulSoup
-Data extraction techniques
-Automating repetitive tasks
-Handling real-world web data
+-Web scraping fundamentals
+-Working with HTTP requests
+-HTML parsing using BeautifulSoup
+-Data extraction techniques
+-Automating repetitive tasks
+-Handling real-world web data
 
 ### Author
 
